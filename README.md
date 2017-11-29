@@ -55,7 +55,7 @@ Untuk setiap N baris pada setiap _node_, baris ke-i berisi 2 buah bilangan di da
 
 Penulisan _routing table_ sesuai dengan urutan _node_, mulai dari _routing table_ pada _node_ 1, _node_ 2, dan seterusnya.
 
-Sebagai contoh, berikut adalah keluaran dari masukan diatas.
+Sebagai contoh, berikut adalah keluaran dari masukan di atas.
 
 ```
 0 1 (Routing table Node 1)
@@ -114,9 +114,9 @@ Indeks pertama _array_ tersebut merepresentasikan _node_ yang memiliki sebuah _r
 
 
 ## Pembagian Tugas
-<p>13515077 - Inisialisasi, Proses, _Output_</p>
-<p>13515113 - Inisialisasi, Proses, _Output_</p>
-<p>13515143 - Inisialisasi, Proses, _Output_</p>
+<p>13515077 - Inisialisasi, Proses, <i>Output</i></p>
+<p>13515113 - Inisialisasi, Proses, <i>Output</i></p>
+<p>13515143 - Inisialisasi, Proses, <i>Output</i></p>
 
 
 ## Jawaban Pertanyaan
