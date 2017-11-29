@@ -89,7 +89,7 @@ Sebagai contoh, berikut adalah keluaran dari masukan diatas.
 ## Petunjuk Penggunaan Program
 
 1. Masukan perintah _make_ pada terminal
-2. Ubah masukan yang ingin dimasukkan di `data/input.txt` sesuai dengan format masukan.
+2. Ubah masukan yang ingin dimasukkan di `data/input.txt` sesuai dengan format masukan
 3. Jalankan dengan memasukkan perintah _make run_ pada terminal
  
 
@@ -103,20 +103,20 @@ Indeks pertama _array_ tersebut merepresentasikan _node_ yang memiliki sebuah _r
 
 1. Menerima masukan berupa jumlah _node_ dan jumlah _edge_ (hubungan ketetanggaan).
 2. Melakukan inisialisasi awal seluruh _routing table_.
-  - _Node_ lain pada _routing table_: _Distance_ dan _next hop_-nya diinisialisasi dengan nilai `UNKNOWN` (-1 pada contoh).
-  - _Node_ diri sendiri pada _routing table_: _Distance_ diinisialisasi dengan nilai `MYSELF` (0 pada contoh) dan _next hop_-nya diinisialisasi dengan _node_ itu sendiri.
+    - _Node_ lain pada _routing table_: _Distance_ dan _next hop_-nya diinisialisasi dengan nilai `UNKNOWN` (-1 pada contoh).
+    - _Node_ diri sendiri pada _routing table_: _Distance_ diinisialisasi dengan nilai `MYSELF` (0 pada contoh) dan _next hop_-nya diinisialisasi dengan _node_ itu sendiri.
 3. Menerima masukan (sejumlah _edge_ yang tadi sudah dimasukkan) berupa hubungan ketetanggaan dua _node_.
-  - Mengganti nilai pada _routing table_ milik kedua _node_ terkait dengan nilai _distance_ dan _next hop_ yang sesuai pada setiap iterasinya.
+    - Mengganti nilai pada _routing table_ milik kedua _node_ terkait dengan nilai _distance_ dan _next hop_ yang sesuai pada setiap iterasinya.
 4. Menerima masukan berupa jumlah skenario pengiriman pesan.
 5. Menerima masukan (sejumlah skenario) berupa skenario pengiriman pesan antara dua _node_.
-  - Melakukan _update_ pada _routing table_ milik _node_ tujuan berdasarkan skenario dan _routing table_ milik _node_ pengirim pada setiap iterasinya.
+    - Melakukan _update_ pada _routing table_ milik _node_ tujuan berdasarkan skenario dan _routing table_ milik _node_ pengirim pada setiap iterasinya.
 6. Menuliskan hasil akhir seluruh _routing table_ di layar.
 
 
 ## Pembagian Tugas
-13515077 - Inisialisasi, Proses, _Output_
-13515113 - Inisialisasi, Proses, _Output_
-13515143 - Inisialisasi, Proses, _Output_
+<p>13515077 - Inisialisasi, Proses, _Output_</p>
+<p>13515113 - Inisialisasi, Proses, _Output_</p>
+<p>13515143 - Inisialisasi, Proses, _Output_</p>
 
 
 ## Jawaban Pertanyaan
@@ -127,11 +127,13 @@ Indeks pertama _array_ tersebut merepresentasikan _node_ yang memiliki sebuah _r
 
 **Link State Protocol** memiliki cara berbeda dengan _distance-vector_. Setiap _router_ mengirimkan data mengenai dirinya dan _router_ lain yang terhubung secara langsung dengannya. Informasi ini disimpan oleh setiap _router_ yang membaca dan kemudian diteruskan dari satu _router_ ke seluruh _router_ lainnya. Pada akhirnya, semua _router_ tahu mengenai semua _router_ yang berada dalam network yang sama, termasuk alamat IP. Penentuan jarak terpendek menggunakan algoritma sendiri, karena tidak hanya dicatat yang terpendek saja.
 
-Perbedaan utama _distance-vector_ dengan _link state_ adalah pengetahuan mengenai _router_ lain. Suatu _router_ dalam _distance-vector_ hanya bisa mendapatkan informasi dari tetangganya yang berhubungan langsung. Sedangkan _router_ dalam _link state_ mendapatkan informasi mengenai semua _router_ yang ada di dalam _network_ tersebut. Selain itu, _update_ pada _link state_ juga hanya terjadi ketika ada perubahan (penambahan/pengurangan _router_), sedangkan _distance-vector_ secara periodik.
+**Perbedaan utama** _distance-vector_ dengan _link state_ adalah pengetahuan mengenai _router_ lain. Suatu _router_ dalam _distance-vector_ hanya bisa mendapatkan informasi dari tetangganya yang berhubungan langsung. Sedangkan _router_ dalam _link state_ mendapatkan informasi mengenai semua _router_ yang ada di dalam _network_ tersebut. Selain itu, _update_ pada _link state_ juga hanya terjadi ketika ada perubahan (penambahan/pengurangan _router_), sedangkan _distance-vector_ secara periodik.
 
 ### Routing Protocol yang Sering Digunakan dan Alasannya
 
-**Routing Protocol** yang implementasinya sering digunakan pada saat ini adalah _Link State Routing Protocol_. Salah satu _Link State Protocol_ yang paling sering digunakan saat ini adalah _Open Shortest Path First_ (OSPF). Alasan _Link State Routing Protocol_ lebih sering digunakan adalah:
+**Routing Protocol** yang implementasinya sering digunakan pada saat ini adalah _Link State Routing Protocol_. Salah satu _Link State Protocol_ yang paling sering digunakan saat ini adalah _Open Shortest Path First_ (OSPF).
+
+**Alasan** _Link State Routing Protocol_ lebih sering digunakan adalah:
 - Didesain untuk beroperasi pada _large, enterprise-level network_.
 - Mengatasi banyak kekurangan yang dimiliki protokol _distance vector_.
 - Mencapai titik konvergen lebih cepat dibandingkan _distance vector_, karena _link state_ hanya berbagi informasi _routing_ dengan tetangganya jika ada perubahan pada topologi jaringan.
